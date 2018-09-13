@@ -64,7 +64,7 @@ class ConnectionManager(object):
         | localhost | 5432 | SomeCompanyDB |
         """
 
-        if isinstance(driverName, str):
+        if isinstance(driverName, basestring):
             dbModule = __import__(driverName)
         else:
             dbModule = driverName
